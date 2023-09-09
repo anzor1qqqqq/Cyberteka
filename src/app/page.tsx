@@ -1,3 +1,5 @@
+import ButtonBookUI from '@/UI/buttonBook';
+
 import BackgroundSVG from '@/svg/backgroundMainPage/backgroundSVG'
 import ArrowSVG from '@/svg/backgroundMainPage/arrow';
 
@@ -30,7 +32,7 @@ export default function Home() {
             }
           </div>
 
-          <button className='main_club_about_btn'>Забронировать!</button>
+          <ButtonBookUI/>
         </div>
 
         <div className='container_img_info_club'>
