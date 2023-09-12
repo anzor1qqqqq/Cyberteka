@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import TopCoverProf from '@/components/topСover/topCoverProf';
+import TopCoverBauman from '@/components/topСover/topCoverBauman';
 import ButtonBookUI from '@/UI/buttonBook';
 
 import BackgroundSVG from '@/svg/backgroundMainPage/backgroundSVG'
@@ -8,7 +12,7 @@ import '../style/mainPage.css'
 export default function Home() {
 
   return (
-    <>
+    <main>
       <div className='background_main_page'>
         <BackgroundSVG/>
       </div>
@@ -37,7 +41,7 @@ export default function Home() {
 
         <div className='container_img_info_club'>
           <div className='block_img_info_club'>
-            <div className='shadow_background prof'></div>
+            <TopCoverProf/>
             <img className='img_info_club-img' src="/static/img/gallery/mainPage/club-prof.jpg" alt="" />
 
             <div className='block_location_club'>
@@ -45,11 +49,11 @@ export default function Home() {
               <span className='location_club-text'>на профсоюзной</span>
             </div>
 
-            <button className='img_info_club-btn'>Подробнее <ArrowSVG/></button>
+            <Link href={'/profClub'} className='img_info_club-btn'>Подробнее <ArrowSVG/></Link>
           </div>
 
           <div className='block_img_info_club'>
-            <div className='shadow_background bauman'></div>
+            <TopCoverBauman/>
             <img className='img_info_club-img' src="/static/img/gallery/mainPage/club-baum.jpg" alt={'Picture'}/> 
 
             <div className='block_location_club'>
@@ -57,10 +61,10 @@ export default function Home() {
               <span className='location_club-text'>на бауманской</span>
             </div>
 
-            <button className='img_info_club-btn'>Подробнее <ArrowSVG/></button>
+            <Link href={'/baumanClub'} className='img_info_club-btn'>Подробнее <ArrowSVG/></Link>
           </div>
         </div>
       </div>
-    </>
+    </main>
   )
 }
