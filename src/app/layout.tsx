@@ -1,6 +1,6 @@
 import '../style/globals.css';
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({children}: {children: React.ReactNode}): JSX.Element {
   return (
     <html lang="ru">
       <head>
@@ -12,7 +12,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       </head>
 
       <body>
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   )

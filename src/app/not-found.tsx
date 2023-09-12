@@ -10,7 +10,7 @@ import '../style/error.css'
 
 export default function NotFound() {
   return (
-    <>
+    <main>
       <div className="background_error_page">
         <ErrorSVG/>
       </div>
@@ -88,6 +88,6 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   )
 }
