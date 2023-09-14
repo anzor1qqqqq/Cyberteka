@@ -56,6 +56,8 @@ header {
 
 .img_club_prof {
     width: 100%;
+    height: 1080px;
+    object-fit: cover;
 }
 
 .contant_club_about {
@@ -70,6 +72,8 @@ header {
     align-items: center;
 
     & > .img_logo_club_about {
+        width: 130px;
+        height: 160px;
         object-fit: cover;
     }
 }
@@ -170,8 +174,8 @@ header {
 .contant_card_zone_club {
     position: absolute;
     z-index: 2;
-    left: 9%;
-    right: 9%;
+    left: 10%;
+    right: 10%;
     top: 10%;
     border: 5px solid #FFF;
     border-radius: 50px;
@@ -272,4 +276,47 @@ header {
             }
         }
     }
+}
+
+.img_zones_card {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.swiper {
+    margin: 200px 0;
+}
+
+.img_slider {
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.swiper-slide  {
+    width: 930px;
+
+    &:not(:last-child) {
+        margin-right: 100px;
+    }
+}
+
+.swiper-pagination {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(217, 217, 217, 0.10);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #D9D9D9;
 }

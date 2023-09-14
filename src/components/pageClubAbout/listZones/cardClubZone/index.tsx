@@ -55,10 +55,7 @@ const CardClubZone: FC<IPropsCardClubZone> = ({club, category}): JSX.Element => 
                     }>
                         <img
                         className="img_zones_card"
-                        src={`/static/img/gallery/club${clubName}/zones/${club}/${category}${clubName}.png`}
-                        width={200}
-                        height={300}
-                        alt="img"
+                        src={`/static/img/gallery/club${clubName}/zones/${category}${clubName}.png`}
                         />
                     </div>
 

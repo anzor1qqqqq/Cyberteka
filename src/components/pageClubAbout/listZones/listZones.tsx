@@ -1,6 +1,6 @@
 'use client'
 
-import CardClubZone from '../cardClubZone';
+import CardClubZone from './cardClubZone';
 
 import { FC } from "react";
 import { IPropsPageClubAbout } from "@/types/types";

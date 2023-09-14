@@ -1,8 +1,7 @@
-import Image from "next/image";
-
 import TopCoverProf from "../topСover/topCoverProf";
 import TopCoverBauman from "../topСover/topCoverBauman";
 import ListZones from "./listZones/listZones";
+import SliderClub from "./slider";
 
 import BackgroundZonesSVG from "@/svg/backgroundClubInfo/backgroundZones";
 
@@ -35,19 +34,13 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     src={club === 'prof' 
                     ? '/static/img/gallery/clubProf/profFull.png' 
                     : '/static/img/gallery/clubBauman/baumanFull.png'}
-                    width={1920}
-                    height={1080}
-                    alt='prof'
                     />
 
                     <div className="contant_club_about">
                         <div className="block_logo_title">
-                            <Image
+                            <img
                             className="img_logo_club_about"
                             src={'/static/img/logo/logo.png'}
-                            width={130}
-                            height={160}
-                            alt="logo"
                             />
 
                             <div className="title_club_name">
@@ -97,6 +90,9 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
+                <section className="container_slider_galerry_club">
+                    <SliderClub club={club}/>
+                </section>
             </main>
         </>
     );

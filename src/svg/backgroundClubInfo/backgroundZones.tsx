@@ -2,7 +2,7 @@ const BackgroundZonesSVG = () => {
     return (
         <>
             <svg className="background_zones" fill="none" xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink">
-            <rect x="-27" id="background_zone_react" /* width="1976" height="1080" */ fill="url(#pattern0)" fillOpacity="0.15"/>
+            <rect id="background_zone_react" /* width="1976" height="1080" */ fill="url(#pattern0)" fillOpacity="0.15"/>
             <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
             <use href="#image0_9_52" transform="matrix(0.000520833 0 0 0.000952932 0 -0.0145833)"/>
