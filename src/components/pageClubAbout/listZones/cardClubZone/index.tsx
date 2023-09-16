@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation'
 
 import Link from 'next/link';
 
+import ArrowSVG from '@/svg/backgroundMainPage/arrow';
+
 import { FC } from 'react';
 import { IPropsCardClubZone } from "@/types/types";
 
@@ -63,31 +65,31 @@ const CardClubZone: FC<IPropsCardClubZone> = ({club, category}): JSX.Element => 
                     ?
                     <>
                         <span className='card_zone-name'>Отдельная Комната</span>
-                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn boot_camp'>Подробнее</Link>
+                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn boot_camp'>Подробнее <ArrowSVG/></Link>
                     </>
                     : category === 'console' && club === 'bauman'
                     ?
                     <>
                         <span className='card_zone-name'>Комната с диваном</span>
-                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn console'>Подробнее</Link>
+                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn console'>Подробнее <ArrowSVG/></Link>
                     </>
                     : category === 'console' && club === 'prof' 
                     ?
                     <>
                         <span className='card_zone-name'>Диван + PS5</span>
-                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn console'>Подробнее</Link>
+                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn console'>Подробнее <ArrowSVG/></Link>
                     </>
                     : category === 'standart' 
                     ?
                     <>
                         <span className='card_zone-name'>Общая Зона</span>
-                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn standart'>Подробнее</Link>
+                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn standart'>Подробнее <ArrowSVG/></Link>
                     </>
                     : category === 'standartPlus' 
                     ?
                     <>
                         <span className='card_zone-name'>Лучшие Места</span>
-                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn standart_plus'>Подробнее</Link>
+                        <Link href={`${pathName}/zonesInfo`} className='card_zone-btn standart_plus'>Подробнее <ArrowSVG/></Link>
                     </>
                     : ''
                     }

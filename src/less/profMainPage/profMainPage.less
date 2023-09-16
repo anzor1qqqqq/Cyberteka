@@ -255,9 +255,25 @@ header {
         }
 
         & > .card_zone-btn {
+            display: inline-flex;
             font-size: 20px;
             font-weight: 400;
             line-height: normal;
+
+            & > .arrow_SVG {
+                position: relative;
+                left: 0;
+                width: 20px;
+                height: 25px;
+                margin-left: 10px;
+                transition: .5s;
+            }
+
+            @media screen and (min-width: 900px) {
+                &:hover > .arrow_SVG {
+                    transform: translateX(10px);
+                }
+            }
 
             &.standart {
                 color:#E637B7;
@@ -286,6 +302,8 @@ header {
 
 .swiper {
     margin: 200px 0;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .img_slider {
@@ -319,4 +337,208 @@ header {
 
 .swiper-pagination-bullet-active {
     background-color: #D9D9D9;
+}
+
+.container_price_list_club {
+    display: flex;
+    height: 1080px;
+    position: relative;
+}
+
+.background_price_list {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    z-index: 1;
+
+    & > rect {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.contant_price_list_club {
+    width: 30%;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    background: #1B1B1B;
+}
+
+.price_list_link {
+    position: absolute;
+    display: inline-flex;
+    bottom: 5%;
+    left: 5%;
+
+    & > .arrow_SVG {
+        position: relative;
+        left: 0;
+        width: 20px;
+        height: 25px;
+        margin-left: 10px;
+        transition: .5s;
+    }
+
+    @media screen and (min-width: 900px) {
+        &:hover > .arrow_SVG {
+            transform: translateX(10px);
+        }
+    }
+}
+
+.container_footer_how_to_find_us {
+    height: 1080px;
+    display: flex;
+}
+
+.contant_footer_find {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block_address_number {
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.40);
+
+
+    &-layot {
+        padding: 50px;
+    }
+
+    &-title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+    &-metro {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        & > #block_metro {
+            display: flex;
+            align-items: center;
+
+            & > .address_name {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: normal;
+                margin-right: 10px;
+            }
+
+            & > .round {
+                width: 1em;
+                height: 1em;
+                margin-right: 10px;
+                border-radius: 50%;
+
+                &.prof {
+                    background-color: #FF8A00;
+                }
+
+                &.akad {
+                    background-color: #F00;
+                }
+                
+                &.bauman {
+                    background-color: #142AF2;
+                }
+
+                &.kras {
+                    background-color: #F00;
+                }
+            }
+
+            & > .time_to_metro {
+                color: #3E3E3E;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &-address_number {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        & > .address_text {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 10px;
+
+            & > .address {
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        & > .number_text {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+
+            & > .number {
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+
+    &-about_info {
+        margin-bottom: 80px;
+
+        & > span {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        & > p {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &-book_svg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > button {
+            margin: 0;
+        }
+    }
+}
+
+.block_map_club {
+    width: 55%;
+    display: flex;
+
+    & > img {
+        border-radius: 30px;
+    }
 }

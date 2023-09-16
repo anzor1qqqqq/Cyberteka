@@ -1,14 +1,24 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
+
+import Link from "next/link";
+
 import TopCoverProf from "../topСover/topCoverProf";
 import TopCoverBauman from "../topСover/topCoverBauman";
 import ListZones from "./listZones/listZones";
 import SliderClub from "./slider";
+import FooterClubInfo from './footerClub';
 
-import BackgroundZonesSVG from "@/svg/backgroundClubInfo/backgroundZones";
+import BackgroundZonesSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundZones";
+import BackgroundPriceListSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundPriceList";
+import ArrowSVG from "@/svg/backgroundMainPage/arrow";
 
 import { FC } from "react";
 import { IPropsPageClubAbout } from "@/types/types";
 
 const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
+    const pathName = usePathname();
 
     return (
         <>
@@ -92,6 +102,19 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
 
                 <section className="container_slider_galerry_club">
                     <SliderClub club={club}/>
+                </section>
+
+                <section className="container_price_list_club">
+                    <BackgroundPriceListSVG/>
+
+                    <div className="contant_price_list_club">
+                        <span className="price_lsit_text">Прайс-лист</span>
+                        <Link className="price_list_link" href={`${pathName}/priceList`}>Подробнее <ArrowSVG/></Link>
+                    </div>
+                </section>
+
+                <section className='container_footer_how_to_find_us'>
+                    <FooterClubInfo club={club}/>
                 </section>
             </main>
         </>
