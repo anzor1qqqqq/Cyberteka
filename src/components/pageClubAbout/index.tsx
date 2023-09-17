@@ -57,7 +57,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
             };
 
             if (thirdContainer?.getBoundingClientRect().top <= 0 
-                && -(thirdContainer?.getBoundingClientRect().top) < thirdContainer?.getBoundingClientRect().height
+                && -(thirdContainer?.getBoundingClientRect().top) < parseInt(String(thirdContainer?.getBoundingClientRect().height)) 
                 && !headerLisLi[2].classList.contains('active')) {
 
                 headerLisLiActive?.classList.remove('active');
@@ -68,7 +68,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
             };
 
             if (fourthContainer?.getBoundingClientRect().top <= 5
-                && -(fourthContainer?.getBoundingClientRect().top) < fourthContainer?.getBoundingClientRect().height
+                && Math.round(-fourthContainer?.getBoundingClientRect().top) < parseInt(String(fourthContainer?.getBoundingClientRect().height))
                 && !headerLisLi[3].classList.contains('active')) {
 
                 headerLisLiActive?.classList.remove('active');
