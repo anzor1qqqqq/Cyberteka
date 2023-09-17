@@ -2,8 +2,12 @@
 
 @Standart: #E637B7;
 
-header {
+.HEIGHTFULL {
     height: 100vh;
+}
+
+header {
+    .HEIGHTFULL();
     display: flex;
     justify-content: start;
     position: fixed;
@@ -26,14 +30,21 @@ header {
     &-li {
         transform: rotate(90deg);
         color: rgba(255, 255, 255, 0.50);
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 400;
         line-height: normal;
+
+        &.active {
+            font-size: 30px;
+            font-weight: 600;
+            color: #FFF;
+        }
     }
 }
 
 .container_previe_prof_club {
     position: relative;
+    .HEIGHTFULL();
 
     & > .shadow_background {
         &.prof {
@@ -56,7 +67,7 @@ header {
 
 .img_club_prof {
     width: 100%;
-    height: 1080px;
+    height: inherit;
     object-fit: cover;
 }
 
@@ -75,6 +86,7 @@ header {
         width: 130px;
         height: 160px;
         object-fit: cover;
+
     }
 }
 
@@ -118,9 +130,9 @@ header {
         &:before {
             content: '';
             display: inline-block;
-            border-top: transparent 5px solid;
-            border-bottom: transparent 5px solid;
-            border-left: #FFF 5px solid;
+            border-top: transparent 10px solid;
+            border-bottom: transparent 10px solid;
+            border-left: #FFF 10px solid;
             margin-right: 15px;
         }
     }
@@ -138,9 +150,12 @@ header {
 }
 
 .container_zones_info {
-    position: relative;
+    height: calc(100vh + 100px);
     width: 100%;
-    height: 1080px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .block_list_card_zone_club {
@@ -161,7 +176,7 @@ header {
 
 .background_zones {
     width: 100%;
-    height: 1080px;
+    height: inherit;
     position: absolute;
     z-index: 1;
 
@@ -172,11 +187,9 @@ header {
 }
 
 .contant_card_zone_club {
-    position: absolute;
+    width: 80%;
+    position: relative;
     z-index: 2;
-    left: 10%;
-    right: 10%;
-    top: 10%;
     border: 5px solid #FFF;
     border-radius: 50px;
 }
@@ -300,15 +313,24 @@ header {
     object-fit: cover;
 }
 
+.container_slider_galerry_club {
+    display: flex;
+    
+
+    @media screen and(min-width: 2000px) {
+        .HEIGHTFULL();
+    }
+}
+
 .swiper {
-    margin: 200px 0;
+    margin: 250px 0;
     user-select: none;
     -webkit-touch-callout: none;
 }
 
 .img_slider {
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     margin: auto;
 }
@@ -316,9 +338,17 @@ header {
 .swiper-slide  {
     width: 930px;
 
+    @media screen and(min-width: 2000px) {
+        width: 1000px;
+    }
+
     &:not(:last-child) {
         margin-right: 100px;
     }
+}
+
+.swiper-wrapper {
+    height: 90%;
 }
 
 .swiper-pagination {
@@ -340,8 +370,9 @@ header {
 }
 
 .container_price_list_club {
+    .HEIGHTFULL();
+    width: 100%;
     display: flex;
-    height: 1080px;
     position: relative;
 }
 
@@ -393,7 +424,8 @@ header {
 }
 
 .container_footer_how_to_find_us {
-    height: 1080px;
+    .HEIGHTFULL();
+    width: 100%;
     display: flex;
 }
 

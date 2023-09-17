@@ -1,4 +1,5 @@
 'use client'
+import * as React from 'react';
 
 import { usePathname } from 'next/navigation'
 
@@ -20,20 +21,133 @@ import { IPropsPageClubAbout } from "@/types/types";
 const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
     const pathName = usePathname();
 
+    React.useEffect(() => {
+        let bool: boolean = true;
+
+        const scrollListen = () => {
+            const headerLisLiActive = document.querySelector('.header_list-li.active') as HTMLLinkElement;
+            const headerLisLi = document.querySelectorAll('.header_list-li') as NodeListOf<HTMLLinkElement>;
+
+            const firstContainer = document.querySelector('.container_previe_prof_club') as HTMLElement;
+            const secondContainer = document.querySelector('.container_zones_info') as HTMLDivElement;
+            const thirdContainer = document.querySelector('.container_slider_galerry_club') as HTMLDivElement;
+            const fourthContainer = document.querySelector('.container_price_list_club') as HTMLDivElement;
+            const fifthContainer = document.querySelector('.container_footer_how_to_find_us') as HTMLDivElement;    
+
+            if (firstContainer?.getBoundingClientRect().top <= 0 
+                && -(firstContainer?.getBoundingClientRect().top) < firstContainer?.getBoundingClientRect().height 
+                && !headerLisLi[0].classList.contains('active')) {
+                    
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[0].classList.add('active');
+
+                return;
+            };
+
+            if (secondContainer?.getBoundingClientRect().top <= 0 
+                && -(secondContainer?.getBoundingClientRect().top) < secondContainer?.getBoundingClientRect().height
+                && !headerLisLi[1].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[1].classList.add('active');
+
+                return;
+            };
+
+            if (thirdContainer?.getBoundingClientRect().top <= 0 
+                && -(thirdContainer?.getBoundingClientRect().top) < thirdContainer?.getBoundingClientRect().height
+                && !headerLisLi[2].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[2].classList.add('active');
+
+                return;
+            };
+
+            if (fourthContainer?.getBoundingClientRect().top <= 5
+                && -(fourthContainer?.getBoundingClientRect().top) < fourthContainer?.getBoundingClientRect().height
+                && !headerLisLi[3].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[3].classList.add('active');
+
+                return;
+            };
+
+            if (fifthContainer?.getBoundingClientRect().top <= 5 
+                && -(fifthContainer?.getBoundingClientRect().top) < fifthContainer?.getBoundingClientRect().height
+                && !headerLisLi[4].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[4].classList.add('active');
+
+                return;
+            };
+        };
+
+        const throtling = (func: () => void, ms: number = 50) => {
+            let timer: any;
+        
+            return (...args: any) => {
+                clearTimeout(timer);
+        
+                timer = setTimeout(() => {
+                    func.apply(this, args);
+                }, ms);
+            };
+        };
+
+
+        if (bool) {
+            scrollListen()
+
+            bool = !bool;
+        } 
+
+        window.addEventListener('scroll', throtling(scrollListen));
+
+        return () => {
+            window.removeEventListener('scroll', throtling(scrollListen));
+        };
+    }, []);
+
+    const scrollContainer = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+
+        /* const headerLisLiActive = document.querySelector('.header_list-li.active') as HTMLLinkElement; */
+
+        const target: HTMLLinkElement = e.target as HTMLLinkElement;
+
+        const id = target.getAttribute('href') as string;
+
+/*         headerLisLiActive.classList.remove('active');
+        target.classList.add('active'); */
+
+        (document.querySelector(id) as HTMLElement).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    };
+
     return (
         <>
             <header>
                 <ul className='header_list'>
-                    <li className='header_list-li'>Главная</li>
-                    <li className='header_list-li'>Зоны</li>
-                    <li className='header_list-li'>Фото</li>
-                    <li className='header_list-li'>Акции</li>
-                    <li className='header_list-li'>Контакты</li>
+                    <Link href={'#main'} className='header_list-li' onClick={e => scrollContainer(e)}>Главная</Link>
+                    <Link href={'#zones'} className='header_list-li' onClick={e => scrollContainer(e)}>Зоны</Link>
+                    <Link href={'#slider'} className='header_list-li' onClick={e => scrollContainer(e)}>Фото</Link>
+                    <Link href={'#priceList'} className='header_list-li' onClick={e => scrollContainer(e)}>Прайс</Link>
+                    <Link href={'#address'} className='header_list-li' onClick={e => scrollContainer(e)}>Контакты</Link>
                 </ul>
             </header>
 
             <main>
-                <section className='container_previe_prof_club'>
+                <section className='container_previe_prof_club' id='main'>
                     {club === 'bauman'
                     ? <TopCoverBauman/>
                     : <TopCoverProf/>
@@ -85,7 +199,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
-                <section className="container_zones_info">
+                <section className="container_zones_info" id='zones' >
                     <BackgroundZonesSVG/>
 
                     <div className="contant_card_zone_club">
@@ -100,11 +214,11 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
-                <section className="container_slider_galerry_club">
+                <section className="container_slider_galerry_club" id='slider'>
                     <SliderClub club={club}/>
                 </section>
 
-                <section className="container_price_list_club">
+                <section className="container_price_list_club" id='priceList'>
                     <BackgroundPriceListSVG/>
 
                     <div className="contant_price_list_club">
@@ -113,7 +227,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
-                <section className='container_footer_how_to_find_us'>
+                <section className='container_footer_how_to_find_us' id='address'>
                     <FooterClubInfo club={club}/>
                 </section>
             </main>
@@ -122,3 +236,6 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
 }
  
 export default PageClubAbout;
+
+
+
