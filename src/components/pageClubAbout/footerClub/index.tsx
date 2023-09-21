@@ -66,7 +66,6 @@ const FooterClubInfo: FC<IPropsPageClubAbout> = ({club}) => {
                             <span className="number_text">Телефон: <span className="number">+7 977 752 20 01</span></span>
                         </>
                         }
-                        
                     </div>
 
                     <div className="block_address_number-about_info">

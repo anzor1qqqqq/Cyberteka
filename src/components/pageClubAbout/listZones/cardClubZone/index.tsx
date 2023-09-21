@@ -15,7 +15,7 @@ const CardClubZone: FC<IPropsCardClubZone> = ({club, category}): JSX.Element => 
     const clubName: string = club === 'bauman' ? 'Bauman' : 'Prof';
 
     return (
-        <div className='block_card_zone_club'>
+        <div className={club === 'bauman' ? 'block_card_zone_club bauman' : "block_card_zone_club"} >
             <div className='block_card_zone_club-border'>
                 <div className='block_card_zone_club-about'>
                     {category === 'bootCamp' 

@@ -103,13 +103,16 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
         };
 
 
-        if (bool) {
+        if (bool && window.innerWidth >= 1000 ) {
             scrollListen()
 
             bool = !bool;
-        } 
+        };
 
-        window.addEventListener('scroll', throtling(scrollListen));
+        {window.innerWidth <= 1000 
+        ? ''
+        :   window.addEventListener('scroll', throtling(scrollListen));
+        }  
 
         return () => {
             window.removeEventListener('scroll', throtling(scrollListen));
@@ -119,14 +122,9 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
     const scrollContainer = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
 
-        /* const headerLisLiActive = document.querySelector('.header_list-li.active') as HTMLLinkElement; */
-
         const target: HTMLLinkElement = e.target as HTMLLinkElement;
 
         const id = target.getAttribute('href') as string;
-
-/*         headerLisLiActive.classList.remove('active');
-        target.classList.add('active'); */
 
         (document.querySelector(id) as HTMLElement).scrollIntoView({
             behavior: 'smooth',
@@ -154,7 +152,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     }
                     
                     <img
-                    className='img_club_prof'
+                    className={club === 'bauman' ? 'img_club_prof bauman' : 'img_club_prof'}
                     src={club === 'prof' 
                     ? '/static/img/gallery/clubProf/profFull.png' 
                     : '/static/img/gallery/clubBauman/baumanFull.png'}
@@ -162,6 +160,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
 
                     <div className="contant_club_about">
                         <div className="block_logo_title">
+
                             <img
                             className="img_logo_club_about"
                             src={'/static/img/logo/logo.png'}
@@ -199,11 +198,15 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
-                <section className="container_zones_info" id='zones' >
+                <section className={club === 'bauman' ? "container_zones_info bauman": "container_zones_info"} id='zones' >
                     <BackgroundZonesSVG/>
 
-                    <div className="contant_card_zone_club">
-                        <h1 className="card_zone_club-title">разные зоны с разными условиями</h1>
+                    <div className={club === 'bauman' ? "contant_card_zone_club bauman": "contant_card_zone_club"}>
+                        {window.innerWidth <= 1300 
+                        ? <h1 className="card_zone_club-title">Зоны и тарифы</h1>
+                        : <h1 className="card_zone_club-title">Разные зоны с разными условиями</h1>
+                        }
+                        
 
                         <div className= {club === 'bauman' 
                         ? "block_list_card_zone_club bauman"
