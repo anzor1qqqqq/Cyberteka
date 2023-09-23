@@ -1,53 +1,168 @@
-import Image from "next/image";
+'use client'
+import * as React from 'react';
+
+import { usePathname } from 'next/navigation'
+
+import Link from "next/link";
 
 import TopCoverProf from "../topСover/topCoverProf";
 import TopCoverBauman from "../topСover/topCoverBauman";
 import ListZones from "./listZones/listZones";
+import SliderClub from "./slider";
+import FooterClubInfo from './footerClub';
 
-import BackgroundZonesSVG from "@/svg/backgroundClubInfo/backgroundZones";
+import BackgroundZonesSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundZones";
+import BackgroundPriceListSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundPriceList";
+import ArrowSVG from "@/svg/backgroundMainPage/arrow";
 
 import { FC } from "react";
 import { IPropsPageClubAbout } from "@/types/types";
 
 const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
+    const pathName = usePathname();
+
+    React.useEffect(() => {
+        let bool: boolean = true;
+
+        const scrollListen = () => {
+            const headerLisLiActive = document.querySelector('.header_list-li.active') as HTMLLinkElement;
+            const headerLisLi = document.querySelectorAll('.header_list-li') as NodeListOf<HTMLLinkElement>;
+
+            const firstContainer = document.querySelector('.container_previe_prof_club') as HTMLElement;
+            const secondContainer = document.querySelector('.container_zones_info') as HTMLDivElement;
+            const thirdContainer = document.querySelector('.container_slider_galerry_club') as HTMLDivElement;
+            const fourthContainer = document.querySelector('.container_price_list_club') as HTMLDivElement;
+            const fifthContainer = document.querySelector('.container_footer_how_to_find_us') as HTMLDivElement;    
+
+            if (firstContainer?.getBoundingClientRect().top <= 0 
+                && -(firstContainer?.getBoundingClientRect().top) < firstContainer?.getBoundingClientRect().height 
+                && !headerLisLi[0].classList.contains('active')) {
+                    
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[0].classList.add('active');
+
+                return;
+            };
+
+            if (secondContainer?.getBoundingClientRect().top <= 0 
+                && -(secondContainer?.getBoundingClientRect().top) < secondContainer?.getBoundingClientRect().height
+                && !headerLisLi[1].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[1].classList.add('active');
+
+                return;
+            };
+
+            if (thirdContainer?.getBoundingClientRect().top <= 0 
+                && -(thirdContainer?.getBoundingClientRect().top) < parseInt(String(thirdContainer?.getBoundingClientRect().height)) 
+                && !headerLisLi[2].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[2].classList.add('active');
+
+                return;
+            };
+
+            if (fourthContainer?.getBoundingClientRect().top <= 5
+                && Math.round(-fourthContainer?.getBoundingClientRect().top) < parseInt(String(fourthContainer?.getBoundingClientRect().height))
+                && !headerLisLi[3].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[3].classList.add('active');
+
+                return;
+            };
+
+            if (fifthContainer?.getBoundingClientRect().top <= 5 
+                && -(fifthContainer?.getBoundingClientRect().top) < fifthContainer?.getBoundingClientRect().height
+                && !headerLisLi[4].classList.contains('active')) {
+
+                headerLisLiActive?.classList.remove('active');
+
+                headerLisLi[4].classList.add('active');
+
+                return;
+            };
+        };
+
+        const throtling = (func: () => void, ms: number = 50) => {
+            let timer: any;
+        
+            return (...args: any) => {
+                clearTimeout(timer);
+        
+                timer = setTimeout(() => {
+                    func.apply(this, args);
+                }, ms);
+            };
+        };
+
+        if (bool && window.innerWidth >= 1000) {
+            scrollListen()
+
+            bool = !bool;
+        };
+
+        {window.innerWidth <= 1000 
+        ? ''
+        : window.addEventListener('scroll', throtling(scrollListen));
+        }  
+
+        return () => {
+            window.removeEventListener('scroll', throtling(scrollListen));
+        };
+    }, []);
+
+    const scrollContainer = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+
+        const target: HTMLLinkElement = e.target as HTMLLinkElement;
+
+        const id = target.getAttribute('href') as string;
+
+        (document.querySelector(id) as HTMLElement).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    };
 
     return (
         <>
             <header>
                 <ul className='header_list'>
-                    <li className='header_list-li'>Главная</li>
-                    <li className='header_list-li'>Зоны</li>
-                    <li className='header_list-li'>Фото</li>
-                    <li className='header_list-li'>Акции</li>
-                    <li className='header_list-li'>Контакты</li>
+                    <Link href={'#main'} className='header_list-li' onClick={e => scrollContainer(e)}>Главная</Link>
+                    <Link href={'#zones'} className='header_list-li' onClick={e => scrollContainer(e)}>Зоны</Link>
+                    <Link href={'#slider'} className='header_list-li' onClick={e => scrollContainer(e)}>Фото</Link>
+                    <Link href={'#priceList'} className='header_list-li' onClick={e => scrollContainer(e)}>Прайс</Link>
+                    <Link href={'#address'} className='header_list-li' onClick={e => scrollContainer(e)}>Контакты</Link>
                 </ul>
             </header>
 
             <main>
-                <section className='container_previe_prof_club'>
+                <section className='container_previe_prof_club' id='main'>
                     {club === 'bauman'
                     ? <TopCoverBauman/>
                     : <TopCoverProf/>
                     }
                     
                     <img
-                    className='img_club_prof'
+                    className={club === 'bauman' ? 'img_club_prof bauman' : 'img_club_prof'}
                     src={club === 'prof' 
                     ? '/static/img/gallery/clubProf/profFull.png' 
                     : '/static/img/gallery/clubBauman/baumanFull.png'}
-                    width={1920}
-                    height={1080}
-                    alt='prof'
                     />
 
                     <div className="contant_club_about">
                         <div className="block_logo_title">
-                            <Image
+
+                            <img
                             className="img_logo_club_about"
                             src={'/static/img/logo/logo.png'}
-                            width={130}
-                            height={160}
-                            alt="logo"
                             />
 
                             <div className="title_club_name">
@@ -82,24 +197,43 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                     </div>
                 </section>
 
-                <section className="container_zones_info">
+                <section className={club === 'bauman' ? "container_zones_info bauman": "container_zones_info"} id='zones' >
                     <BackgroundZonesSVG/>
 
-                    <div className="contant_card_zone_club">
-                        <h1 className="card_zone_club-title">разные зоны с разными условиями</h1>
+                    <div className={club === 'bauman' ? 'contant_card_zone_club bauman' : 'contant_card_zone_club'}>
+                        <h1 className="card_zone_club-title">Зоны и тарифы</h1>
 
                         <div className= {club === 'bauman' 
-                        ? "block_list_card_zone_club bauman"
-                        : "block_list_card_zone_club prof"
+                        ? 'block_list_card_zone_club bauman'
+                        : 'block_list_card_zone_club prof'
                         }>
                             <ListZones club={club}/>
                         </div>
                     </div>
                 </section>
 
+                <section className="container_slider_galerry_club" id='slider'>
+                    <SliderClub club={club}/>
+                </section>
+
+                <section className="container_price_list_club" id='priceList'>
+                    <BackgroundPriceListSVG/>
+
+                    <div className="contant_price_list_club">
+                        <span className="price_lsit_text">Прайс-лист</span>
+                        <Link className="price_list_link" href={`${pathName}/priceList`}>Подробнее <ArrowSVG/></Link>
+                    </div>
+                </section>
+
+                <section className='container_footer_how_to_find_us' id='address'>
+                    <FooterClubInfo club={club}/>
+                </section>
             </main>
         </>
     );
 }
  
 export default PageClubAbout;
+
+
+

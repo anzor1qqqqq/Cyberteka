@@ -130,7 +130,15 @@
 .block_img_info_club {
     position: relative;
     height: 50%;
-    width: 540px;
+    width: 1000px;
+
+    @media screen and (max-width: 2200px) {
+        width: 800px;
+    }
+
+    @media screen and (max-width: 2000px) {
+        width: 540px;
+    }
 
     @media screen and (max-width: 1600px) {
         width: 500px;

@@ -1,1 +1,1 @@
-@tailwind base;body{font-family:'Inter',sans-serif;color:#FFF;background-color:#0E0E0E}
+@tailwind base;body{font-family:'Inter',sans-serif;color:#FFF;background-color:#0E0E0E}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background-color:#0E0E0E}::-webkit-scrollbar-thumb{background-color:#3d3d3d;border-radius:10px}
