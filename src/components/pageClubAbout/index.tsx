@@ -102,8 +102,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
             };
         };
 
-
-        if (bool && window.innerWidth >= 1000 ) {
+        if (bool && window.innerWidth >= 1000) {
             scrollListen()
 
             bool = !bool;
@@ -111,7 +110,7 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
 
         {window.innerWidth <= 1000 
         ? ''
-        :   window.addEventListener('scroll', throtling(scrollListen));
+        : window.addEventListener('scroll', throtling(scrollListen));
         }  
 
         return () => {
@@ -201,16 +200,12 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
                 <section className={club === 'bauman' ? "container_zones_info bauman": "container_zones_info"} id='zones' >
                     <BackgroundZonesSVG/>
 
-                    <div className={club === 'bauman' ? "contant_card_zone_club bauman": "contant_card_zone_club"}>
-                        {window.innerWidth <= 1300 
-                        ? <h1 className="card_zone_club-title">Зоны и тарифы</h1>
-                        : <h1 className="card_zone_club-title">Разные зоны с разными условиями</h1>
-                        }
-                        
+                    <div className={club === 'bauman' ? 'contant_card_zone_club bauman' : 'contant_card_zone_club'}>
+                        <h1 className="card_zone_club-title">Зоны и тарифы</h1>
 
                         <div className= {club === 'bauman' 
-                        ? "block_list_card_zone_club bauman"
-                        : "block_list_card_zone_club prof"
+                        ? 'block_list_card_zone_club bauman'
+                        : 'block_list_card_zone_club prof'
                         }>
                             <ListZones club={club}/>
                         </div>
