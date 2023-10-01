@@ -7,6 +7,7 @@ import { IPropsPageClubAbout } from "@/types/types";
 import { FC } from 'react'
 
 const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
+    console.log(club);
     return (
         <main>
             <section className="container_price_list_standart">
