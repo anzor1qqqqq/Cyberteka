@@ -1,0 +1,614 @@
+// out: "../../style/priceListPage.css", compress: true, sourceMap: false
+
+.FULLSCREENCONTAINER {
+    width: 100%;   
+    height: calc(100vh + 100px);
+}
+
+.TITLECHARACTRATE {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.TITLEZONE {
+    font-size: 90px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+//////////////////////////////
+
+.container_price_list_standart {
+    .FULLSCREENCONTAINER();
+    position: relative;
+}
+
+.block_price_list_standart {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 10%;
+
+    &-title {
+        .TITLEZONE();
+        color: #FFF;
+
+        &-color {
+            .TITLEZONE();
+            color: #E637B7;
+        }
+    }
+
+    &-charact {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+
+        &-title {
+            .TITLECHARACTRATE();
+            margin-bottom: 25px;
+        }
+
+        &-card-list {
+            display: flex;
+            white-space: nowrap;
+            width: 100%;
+        }
+    }
+
+    &-rate {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &-title {
+            .TITLECHARACTRATE();
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.all_price_standart_svg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    & > rect {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.block_about_charact {
+    min-width: 190px;
+    min-height: 230px;
+    max-width: 190px;
+    max-height: 230px;
+    display: flex;
+    border-radius: 15px;
+    background-color: #1F1F1F;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.30);
+    padding: 10px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &-wrapper {
+        width: 100%;
+        border-radius: 5px;
+        border: 3px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.block_about_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-config {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        margin: 10px 0 7px;
+
+        &-model {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+
+.block_img_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 140px;
+    margin: auto;
+
+    & > img {
+        object-fit: cover;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.block_rate_list_price {
+    display: flex;
+}
+
+.contant_rate_time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+    &-hour {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 5px;
+    }
+
+    &-available {
+        color: rgba(255, 255, 255, 0.30);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}
+
+.contant_price_rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-name {
+        color: rgba(255, 255, 255, 0.30);
+        font-size: 10px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 5px;
+    }
+
+    &-price {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}
+
+.block_sale_info {
+    min-width: 300px;
+    max-width: 300px;
+    height: 45%; 
+    border-radius: 15px;
+    background: #1F1F1F;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.30);
+    padding: 10px;
+}
+
+.contant_sale_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+    max-height: 230px;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border: 3px solid rgba(255, 255, 255, 0.05);
+
+        &-days {
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 100%;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        &-sale {
+            color: #FF9EDA;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 100%;
+            text-transform: uppercase;
+
+            &-color {
+                color: #E637B7;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contant_rate {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.round_background {
+    width: 60px;
+    height: 60px;
+    background-color: #131313;
+    border-radius: 50%;
+
+    &.wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.one_hour_rate {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    background-color: transparent;
+    clip-path: circle(35px at 35px 35px);
+    transform: rotateY(180deg);
+
+    &-round {
+        width: 35px;
+        height: 35px;
+        background-color: #FFF;
+        
+        clip-path: polygon(0 0, 
+        100% 100%, 
+        100% 0);
+    }
+}
+
+.two_hour_rate {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    background-color: transparent;
+    clip-path: circle(35px at 35px 35px);
+    transform: rotateY(180deg);
+
+    &-round {
+        width: 35px;
+        height: 35px;
+        background-color: #FFF;
+    }
+}
+
+.three_hour_rate {
+    width: 35px;
+    height: 70px;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    background-color: transparent;
+    clip-path: circle(35px at 35px 35px);
+    transform: rotateY(180deg);
+
+    & > &-round {
+        width: 35px;
+        height: 70px;
+        background-color: #FFF;
+        clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 50%,
+        0 100%);
+    }
+}
+
+.four_hour_rate {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -10%;
+    background-color: transparent;
+    clip-path: circle(35px at 35px 35px);
+
+    & > div {
+        width: 70px;
+        height: 70px;
+        clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        50% 50%);
+        background-color: #FFF;
+    }
+}
+
+.five_hour_rate {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    background-color: #FFF;
+    clip-path: circle(20px at 20px 20px);
+    transform: rotateY(180deg);
+}
+
+.five_hour_rate-round {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15%;
+    right: 45%;
+    background-color: transparent;
+    clip-path: circle(20px at 20px 20px);
+
+    & > div {
+        width: 40px;
+        height: 40px;
+        background-color: #131313;
+        clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 100%,
+        50% 100%)
+    }
+}
+
+.round_background-white_round {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 3;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+.block_rays_sun {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    &-rays {
+        width: 100%;
+        height: 100%;
+
+        &:nth-child(1) {
+            position: absolute;
+            transform: rotate(30deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            transform: rotate(60deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+        
+        &:nth-child(3) {
+            position: absolute;
+            transform: rotate(90deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(4) {
+            position: absolute;
+            transform: rotate(120deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(5) {
+            position: absolute;
+            transform: rotate(150deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(6) {
+            position: absolute;
+            transform: rotate(180deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(7) {
+            position: absolute;
+            transform: rotate(210deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(8) {
+            position: absolute;
+            transform: rotate(240deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(9) {
+            position: absolute;
+            transform: rotate(270deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(10) {
+            position: absolute;
+            transform: rotate(300deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(11) {
+            position: absolute;
+            transform: rotate(330deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+        &:nth-child(12) {
+            position: absolute;
+            transform: rotate(360deg);
+
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #FFF;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+    }
+}

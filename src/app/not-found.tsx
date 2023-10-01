@@ -51,7 +51,7 @@ export default function NotFound() {
               <div className='block_input_other'>
                 <div className='contant_input_other'>
                   <span className='input_other_quantity'>Количетсво гостей</span>
-                  <input className='input_error num' type="text" placeholder='2'/>
+                  <input className='input_error num' type="text" placeholder='2' maxLength={2}/>
                 </div>
 
                 <div className='block_input_number_wishes'>

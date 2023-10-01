@@ -1,22 +1,23 @@
 'use client'
+
 import * as React from 'react';
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
 import Link from "next/link";
 
-import TopCoverProf from "../topСover/topCoverProf";
 import TopCoverBauman from "../topСover/topCoverBauman";
+import TopCoverProf from "../topСover/topCoverProf";
+import FooterClubInfo from './footerClub';
 import ListZones from "./listZones/listZones";
 import SliderClub from "./slider";
-import FooterClubInfo from './footerClub';
 
-import BackgroundZonesSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundZones";
-import BackgroundPriceListSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundPriceList";
 import ArrowSVG from "@/svg/backgroundMainPage/arrow";
+import BackgroundPriceListSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundPriceList";
+import BackgroundZonesSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundZones";
 
-import { FC } from "react";
 import { IPropsPageClubAbout } from "@/types/types";
+import { FC } from "react";
 
 const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
     const pathName = usePathname();
@@ -134,12 +135,12 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
     return (
         <>
             <header>
-                <ul className='header_list'>
-                    <Link href={'#main'} className='header_list-li' onClick={e => scrollContainer(e)}>Главная</Link>
-                    <Link href={'#zones'} className='header_list-li' onClick={e => scrollContainer(e)}>Зоны</Link>
-                    <Link href={'#slider'} className='header_list-li' onClick={e => scrollContainer(e)}>Фото</Link>
-                    <Link href={'#priceList'} className='header_list-li' onClick={e => scrollContainer(e)}>Прайс</Link>
-                    <Link href={'#address'} className='header_list-li' onClick={e => scrollContainer(e)}>Контакты</Link>
+                <ul className="header_list">
+                    <Link href={'#main'} className="header_list-li" onClick={e => scrollContainer(e)}>Главная</Link>
+                    <Link href={'#zones'} className="header_list-li" onClick={e => scrollContainer(e)}>Зоны</Link>
+                    <Link href={'#slider'} className="header_list-li" onClick={e => scrollContainer(e)}>Фото</Link>
+                    <Link href={'#priceList'} className="header_list-li" onClick={e => scrollContainer(e)}>Прайс</Link>
+                    <Link href={'#address'} className="header_list-li" onClick={e => scrollContainer(e)}>Контакты</Link>
                 </ul>
             </header>
 
