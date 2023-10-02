@@ -50,7 +50,7 @@ const ListCharactCard = () => {
             <CharactBlockUI>
                 <div className="block_about_card">
                     <span className="block_about_card-config">монитор</span>
-                    <span className="block_about_card-config-model">27" 144Hz</span>
+                    <span className="block_about_card-config-model">27`&quot;` 144Hz</span>
                 </div>
 
                 <div className="block_img_card">
