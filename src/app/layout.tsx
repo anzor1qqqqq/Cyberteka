@@ -2,14 +2,11 @@
 
 import * as React from 'react';
 
-import { GlobalContext } from "@/global/context";
-
-import { TStateGlobal, IChildrenElement } from "@/types/types";
+import { IChildrenElement } from "@/types/types";
 
 import '../style/globals.css';
 
 export default function RootLayout({children}: IChildrenElement): JSX.Element {
-  const [clubName, setClubName] = React.useState<TStateGlobal>(null);
 
   return (
     <html lang="ru">
@@ -22,12 +19,7 @@ export default function RootLayout({children}: IChildrenElement): JSX.Element {
       </head>
 
       <body>
-        <GlobalContext.Provider value={{
-          clubName,
-          setClubName
-        }}>
           {children}
-        </GlobalContext.Provider>
       </body>
     </html>
   )

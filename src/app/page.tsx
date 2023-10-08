@@ -4,8 +4,6 @@ import * as React from 'react';
 
 import Link from 'next/link';
 
-import { GlobalContext } from "@/global/context";
-
 import TopCoverProf from '@/components/topСover/topCoverProf';
 import TopCoverBauman from '@/components/topСover/topCoverBauman';
 import ButtonBookUI from '@/UI/buttonBook';
@@ -13,12 +11,9 @@ import ButtonBookUI from '@/UI/buttonBook';
 import BackgroundSVG from '@/svg/backgroundMainPage/backgroundSVG'
 import ArrowSVG from '@/svg/backgroundMainPage/arrow';
 
-import { IPropsContext } from "@/types/types";
-
 import '../style/mainPage.css'
 
 export default function Home() {
-  const { setClubName } = React.useContext(GlobalContext) as IPropsContext;
 
   return (
     <main>
@@ -58,7 +53,7 @@ export default function Home() {
               <span className='location_club-text'>на профсоюзной</span>
             </div>
 
-            <Link href={'/profClub'} className='img_info_club-btn' onClick={() => setClubName('prof')}>Подробнее <ArrowSVG/></Link>
+            <Link href={'/profClub'} className='img_info_club-btn'>Подробнее <ArrowSVG/></Link>
           </div>
 
           <div className='block_img_info_club'>
@@ -70,7 +65,7 @@ export default function Home() {
               <span className='location_club-text'>на бауманской</span>
             </div>
 
-            <Link href={'/baumanClub'} className='img_info_club-btn' onClick={() => setClubName('bauman')}>Подробнее <ArrowSVG/></Link>
+            <Link href={'/baumanClub'} className='img_info_club-btn'>Подробнее <ArrowSVG/></Link>
           </div>
         </div>
       </div>

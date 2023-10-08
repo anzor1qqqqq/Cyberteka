@@ -8,7 +8,7 @@ import PagePriceList from "@/components/pagePriceList";
 
 import '../../../style/priceListPage.css'
 
-const ListPriceProfPage = () => {
+const ListPriceBaumanPage = () => {
     const [clubName, setClubName] = React.useState<'bauman' | 'prof'>('prof');
 
     const pathName = usePathname();
@@ -19,9 +19,10 @@ const ListPriceProfPage = () => {
         findClubName ? setClubName('prof') : setClubName('bauman');
     }, []);
 
+
     return (
         <PagePriceList club={clubName}/>
     );
 }
  
-export default ListPriceProfPage;
+export default ListPriceBaumanPage;
