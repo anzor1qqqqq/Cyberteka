@@ -141,7 +141,7 @@ const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
                 <BackgroundHalLMapSVG/>
                 <BackgroundHallMapSecondSVG/>
 
-                <MapHallClub/>
+                <MapHallClub club={club}/>
             </section>
         </main>
     );

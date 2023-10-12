@@ -794,7 +794,7 @@
 
         & > .arrow_buttom_bottom_btn {
             position: absolute;
-            left: -51%;
+            left: -52%;
             top: -40%;
         }
 
@@ -819,6 +819,7 @@
 
 .container_hall_map {
     .FULLSCREENCONTAINER();
+    height: calc(100vh + 800px);
     position: relative;
     overflow: hidden;
      
@@ -1257,3 +1258,765 @@
         }
     }
 }
+
+.contant_hall_map_bauman {
+    width: 1528px;
+    display: flex;
+
+    & > .hall_map_bauman {
+        width: 1300px;
+
+        & > .first_part_map {
+            display: flex;
+            align-items: center;
+
+            & > .wall {
+                width: 180px;
+                height: 60px;
+                border-radius: 10px 10px 10px 0;
+                background: #202020;
+                margin-right: 70px;
+            }
+
+            & > .arrow_entrance {
+                width: 32px;
+                height: 22px;
+                transform: rotate(90deg);
+            }
+
+            & > .wall_big {
+                width: 948px;
+                height: 60px;
+                border-radius: 10px 10px 0 10px;
+                background: #202020;
+                margin-left: 70px;
+            }
+        }
+
+        & > .second_part_map {
+            display: flex;
+
+            & > .wall {
+                height: 60px;
+                width: 60px;
+                background: #202020;
+            }
+
+            & > .contant_standart_pc {
+                display: flex;
+                margin: 20px 20px 0 425px;
+
+                & > .contant_standart_pc-pc {
+                    .standart_pc_zone-numbering_color();
+                    background-color: #FF64C4;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            & > .wall_centart {
+                width: 60px;
+                height: 60px;
+                background: #202020;
+                border-radius: 0 0 10px 10px;
+            }
+
+            & > .wall_right {
+                width: 60px;
+                height: 60px;
+                background-color: #202020;
+                margin-left: auto;
+            }
+        }
+        
+        & > .third_part_map {
+            display: flex;
+            align-items: center;
+
+            & > .wall {
+                width: 60px;
+                height: 60px;
+                background: #202020;
+            }
+
+            & > .contant_camera {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #101010;
+                border-radius: 50%;
+                margin-left: 75px;
+
+                & > .camera {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            & > .contant_camera_right {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #101010;
+                border-radius: 50%;
+                margin-left: auto;
+
+                & > .camera {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            & > .wall_right {
+                width: 60px;
+                height: 60px;
+                background: #202020;
+                margin-left: 78px;
+            }
+        }
+
+        & > .fourth_part_map {
+            display: flex;
+
+            & > .wall {
+                height: 230px;
+                width: 60px;
+                background: #202020;
+            }
+
+            & > .admin {
+                width: 100px;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;                border-radius: 10px;
+                background-color: #4D4D4D;
+                margin: auto 0 20px 20px;
+
+                & > span {
+                    color: #FFF;
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    transform: rotate(90deg);
+                }
+            }
+
+            & > .contant_standart_pc {
+                display: flex;
+                margin: 20px 0 0 305px;
+
+                & > .contant_standart_pc-pc_double {
+                    & > .contant_standart_pc-pc_double-pc {
+                        display: flex;
+
+                        & > .contant_standart_pc-pc_double-pc-pc {
+                            .standart_pc_zone-numbering_color();
+                            background-color: #FF64C4;
+
+                            &:not(:last-child) {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+
+                    & > .wall {
+                        width: 205px;
+                        height: 10px;
+                        background-color: #202020;
+                        margin: 15px 0;
+                    }   
+                }
+
+                & > .contant_standart_pc-pc {
+                    display: flex;
+                    align-items: end;
+                    margin: 0 0 20px 126px;
+
+                    & > .contant_standart_pc-pc {
+                        & > .contant_standart_pc-pc_double-pc-pc {
+                            .standart_pc_zone-numbering_color();
+                            background-color: #FF64C4;
+
+                            &:not(:last-child) {
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > .wall_right {
+                width: 60px;
+                height: 230px;
+                background-color: #202020;
+                border-radius: 10px 10px 0 0;
+                margin-left: 20px;
+            }
+
+            & > .contant_standart_plus {
+                display: flex;
+                align-items: end;
+                margin: 0 0 0 20px;
+
+                &.end {
+                    margin: 0 0 0 15px;
+                }
+
+                & > .contant_standart_plus-pc {
+                    display: flex;
+                    flex-direction: column;
+
+                    & > .contant_standart_plus-pc-numbering {
+                        .standart_pc_zone-numbering_color();
+                        background-color: #149EF2;
+
+                        &:not(:last-child) {
+                            margin-bottom: 15px;
+                        }
+                    }                    
+                }
+
+                & > .contant_standart_plus-pc-right {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 15px 0 40px;
+
+                    & > .contant_standart_plus-pc-right-numbering {
+                        .standart_pc_zone-numbering_color();
+                        background-color: #149EF2;
+
+                        &:not(:last-child) {
+                            margin-bottom: 15px;
+                        }                     
+                    }
+                }
+            }
+
+            & > .contant_wall_right_min {
+                display: flex;
+                align-items: end;
+
+                & > .wall {
+                    width: 15px;
+                    height: 116px;
+                    background-color: #202020;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            & > .wall_end {
+                width: 60px;
+                height: 230px;
+                background-color: #202020;
+                margin-left: 80px;
+            }
+        }
+
+        & > .five_part_map {
+            display: flex;
+            align-items: center;
+
+            & > .wall_left {
+                width: 250px;
+                height: 60px;
+                background-color: #202020;
+                border-radius: 0 10px 10px 0;
+                margin-right: 150px;
+            }
+
+            & > .wall_center_left {
+                width: 350px;
+                height: 60px;
+                background-color: #202020;
+                border-radius: 10px;
+            }
+
+            & > .door {
+                width: 56px;
+                height: 20px;
+                border-radius: 10px;
+                background: black;
+                margin: 0 5px;
+            }
+
+            & > .wall_center_right {
+                width: 119px;
+                height: 60px;
+                background-color: #202020;
+                border-radius: 10px 0 0 10px;
+            }
+
+            & > .contant_standart_pc {
+                display: flex;
+                align-items: center;
+                margin: 0 15px 0 20px;
+
+                &.one {
+                    margin: 0 15px 0 15px;
+                }
+
+                & > .contant_standart_pc-pc {
+                    margin-top: 10px;
+                    .standart_pc_zone-numbering_color();
+
+                    &:not(:last-child) {
+                        margin-right: 40px;
+                    }
+                }
+            }
+
+            & > .wall_min {
+                width: 15px;
+                height: 60px;
+                background-color: #202020;
+            }
+
+            & > .wall_big {
+                width: 60px;
+                height: 60px;
+                background-color: #202020;
+                margin-left: 65px;
+            }
+        }
+
+        & > .six_part_map {
+            display: flex;
+            
+            & > .contant_wc_ps {
+                display: flex;
+
+                & > .contant_wc_ps-wc {
+                    display: flex;
+
+                    & > .wall_left {
+                        width: 60px;
+                        height: 440px;
+                        background-color: #202020;
+                        border-radius: 0 0 0 10px;
+                    }
+
+                    & > .contant_wc_ps-wc-wall {
+                        margin-top: 210px;
+
+                        & > .wc {
+                            position: relative;
+                            width: 150px;
+                            height: 150px;
+                            position: relative;
+                            border-radius: 10px;
+                            background: #4D4D4D;
+                            margin: 0 20px 20px;
+
+                            & > span {
+                                position: absolute;
+                                left: 50%;
+                                transform: translate(-50%, 50%);
+                                bottom: 50%;
+                                color: #FFF;
+                                font-size: 30px;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: uppercase;
+                            }
+
+                            & > .contant_camera {
+                                width: 45px;
+                                height: 45px;
+                                background-color: #101010;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: absolute;
+                                top: -15%;
+                                left: 50%;
+                                margin-left: -22.5px;
+
+                                & > .camera {
+                                    width: 22px;
+                                    height: 22px;
+                                }
+                            }
+                        }
+
+                        & > .wall {
+                            height: 60px;
+                            width: 190px;
+                            background-color: #202020;
+                        }
+                    }
+
+                    & > .wall_right {
+                        width: 60px;
+                        height: 340px;
+                        background-color: #202020;
+                        border-radius: 10px 0 0 0;
+                        margin-top: 100px;
+                    }
+                }
+
+
+                & > .contant_wc_ps-ps {
+                    & > .door {
+                        width: 20px;
+                        height: 90px;
+                        background-color: black;
+                        border-radius: 10px;
+                        margin: 5px 20px 5px auto;
+                    }
+
+                    & > .contant_wall_door {
+                        display: flex;
+                        align-items: center;
+
+                        & > .wall {
+                            width: 40px;
+                            height: 60px;
+                            background-color: #202020;
+                            border-radius: 0 10px 10px 0;
+                        }
+
+                        & > .door {
+                            width: 70px;
+                            height: 20px;
+                            background-color: black;
+                            border-radius: 10px;
+                            margin: 0 5px;    
+                        }
+
+                        & > .wall_right {
+                            width: 100px;
+                            height: 60px;
+                            background-color: #202020;
+                            border-radius: 10px 10px 0 10px;
+                        }
+                    }
+
+                    & > .contant_pc_wall {
+                        display: flex;
+
+                        & > .ps {
+                            width: 120px;
+                            height: 180px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            background: #2636C0;
+                            margin: 20px;
+
+                            & > span {
+                                color: #FFF;
+                                font-size: 30px;
+                                font-weight: 600;
+                                line-height: normal;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        & > .wall {
+                            width: 60px;
+                            height: 220px;
+                            background-color: #202020;
+                        }
+                    }
+
+                    & > .wall {
+                        width: 220px;
+                        height: 60px;
+                        background-color: #202020;
+                        border-radius: 0 0 10px 0;
+                    }
+                }
+
+                & > .contant_boot_camp_zone {
+                    & > .boot_camp_wall {
+                        display: flex;
+
+                        & > .boot_camp_wall-pc {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            margin: 20px 20px 20px 40px;
+
+                            & > .boot_camp_wall-pc-numbering {
+                                .standart_pc_zone-numbering_color();
+                                background-color: #FF003D;
+                            }
+                        }
+
+                        & > .wall {
+                            width: 60px;
+                            height: 320px;
+                            background-color: #202020;
+                        }
+                    }
+
+                    & > .wall {
+                        width: 160px;
+                        height: 60px;
+                        background-color: #202020;
+                    }
+                }
+
+                & > .contant_boot_camp_zone_two {
+                    & > .contant_boot_camp_zone_two-pc-wall{
+                        display: flex;
+
+                        & > .pc {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            margin: 20px 10px 20px 20px;
+
+                            & > .pc_numbering {
+                                .standart_pc_zone-numbering_color();
+                                background-color: #FF003D;
+                            }
+                        }
+
+                        & > .contant_camera {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            background-color: #090909;
+                            margin-top: 20px;
+
+                            & > .camera {
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+
+                        & > .pc_two {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            margin: 20px 20px 20px 10px;
+
+                            & > .pc_two_numbering {
+                                .standart_pc_zone-numbering_color();
+                                background-color: #FF003D;
+                            }
+                        }
+
+                        & > .wall {
+                            width: 60px;
+                            height: 320px;
+                            background-color: #202020;
+                        }
+                    }
+
+                    & > .wall {
+                        width: 245px;
+                        height: 60px;
+                        background-color: #202020;
+                    }
+                }
+
+                & > .contant_boot_camp_standart_plus_zone{
+                    display: flex;
+
+                    & > .contant_standart_plus{
+                        & > .standart_plus-wall{
+                            & > .standart_plus-wall-one{
+                                display: flex;
+                                
+                                & > .standart_plus-wall-one-numbering{
+                                    .standart_pc_zone-numbering_color();
+                                    background: #149EF2;
+                                }
+
+                                & > .one {
+                                    margin: 10px 40px 0 20px;
+
+                                    &.margin {
+                                        margin: 15px 40px 20px 20px;
+                                    }                                        
+                                }
+
+                                & > .two{
+                                    margin: 10px 15px 0 0;
+
+                                    &.margin {
+                                        margin: 15px 15px 20px 0;
+                                    }
+                                }
+
+                                & > .three{
+                                    margin: 10px 80px 0 15px;
+
+                                    &.margin {
+                                        margin: 15px 80px 20px 15px;
+                                    }
+                                }
+
+                                & > .wall {
+                                    width: 15px;
+                                    height: 50px;
+                                    background-color: #202020;
+
+                                    &.bottom {
+                                        height: 75px;
+                                    }
+                                }
+
+                                & > .wall_big{
+                                    width: 60px;
+                                    height: 50px;
+                                    background-color: #202020;
+
+                                    &.bottom {
+                                        height: 75px;
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .contant_bootcamp_wall {
+                            & > .contant_boot_camp_wall_door{
+                                & > .wall_door{
+                                    display: flex;
+                                    align-items: center;
+
+                                    & > .wall{
+                                        width: 225px;
+                                        height: 60px;
+                                        background-color: #202020;
+                                        border-radius: 0 10px 10px 0;
+                                    }
+
+                                    & > .door{
+                                        width: 70px;
+                                        height: 20px;
+                                        background-color: black;
+                                        border-radius: 10px;
+                                        margin: 0 5px;
+                                    }
+
+                                    & > .wall_big{
+                                        width: 60px;
+                                        height: 60px;
+                                        background-color: #202020;
+                                    }
+                                }
+
+                                & > .boot_camp_pc_wall{
+                                    display: flex;
+
+                                    & > .boot_camp_pc{
+                                        width: 265px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        margin: 75px auto 20px 20px;
+
+                                        & > .boot_camp_pc-numbering{
+                                            .standart_pc_zone-numbering_color();
+                                            background-color: #FF003D;
+                                        } 
+                                    }
+
+                                    & > .wall {
+                                        width: 60px;
+                                        height: 135px;
+                                        background-color: #202020;
+                                    }
+                                }
+                            }
+
+                            & > .wall_big {
+                                width: 365px;
+                                height: 60px;
+                                background-color: #202020;
+                                border-radius: 0 0 10px 0;
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+.about_color_zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 30px;
+
+    &-standart {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #FF64C4;
+            margin-right: 10px;
+        }
+
+        &-text {
+            color: #FFF;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &-standart_plus {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #149EF2;
+            margin-right: 10px;
+        }
+
+        &-text {
+            color: #FFF;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &-boot_camp {
+        display: flex;
+        align-items: center;
+
+        &-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #FF003D;
+            margin-right: 10px;
+        }
+
+        &-text {
+            color: #FFF;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+}
+

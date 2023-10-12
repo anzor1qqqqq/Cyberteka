@@ -510,7 +510,7 @@ const ListRateCard: FC<TListRate> = ({category}) => {
                         </div>
 
                         <div className="contant_price_rate">
-                            <span style={{color: '#FF013E;'}} className="contant_price_rate-name">Выгода: Час = 60 ₽</span>
+                            <span style={{color: '#FF013E'}} className="contant_price_rate-name">Выгода: Час = 60 ₽</span>
                             <span className="contant_price_rate-price">790 ₽</span>
                         </div>
                     </RateBlockUI>
