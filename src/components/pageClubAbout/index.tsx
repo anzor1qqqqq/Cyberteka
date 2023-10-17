@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 
 import Link from "next/link";
 
+import { ThrotlingScroll } from "@/function/functionGlobal";
+
 import TopCoverBauman from "../topСover/topCoverBauman";
 import TopCoverProf from "../topСover/topCoverProf";
 import FooterClubInfo from './footerClub';
@@ -91,18 +93,6 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
             };
         };
 
-        const throtling = (func: () => void, ms: number = 50) => {
-            let timer: any;
-        
-            return (...args: any) => {
-                clearTimeout(timer);
-        
-                timer = setTimeout(() => {
-                    func.apply(this, args);
-                }, ms);
-            };
-        };
-
         if (bool && window.innerWidth >= 1000) {
             scrollListen()
 
@@ -111,11 +101,11 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
 
         {window.innerWidth <= 1000 
         ? ''
-        : window.addEventListener('scroll', throtling(scrollListen));
+        : window.addEventListener('scroll', ThrotlingScroll(scrollListen));
         }  
 
         return () => {
-            window.removeEventListener('scroll', throtling(scrollListen));
+            window.removeEventListener('scroll', ThrotlingScroll(scrollListen));
         };
     }, []);
 

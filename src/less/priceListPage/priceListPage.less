@@ -819,7 +819,7 @@
 
 .container_hall_map {
     .FULLSCREENCONTAINER();
-    height: calc(100vh + 800px);
+    height: calc(100vh + 400px);
     position: relative;
     overflow: hidden;
      
@@ -873,10 +873,16 @@
     height: 45px;
     border-radius: 50%;
     background-color: #090909;
+    cursor: pointer;
 
     & > .camera {
         width: 22px;
         height: 22px;
+    }
+
+    &.standart_plus {
+        margin-left: auto;
+        margin-right: 463px;
     }
 }
 
@@ -898,8 +904,12 @@
         margin-bottom: 50px;
     }
 
-    & > .contant_hall_map {
-   /*      display: grid; */
+    & > .overwloy {
+        overflow: auto;
+        padding: 20px 0;
+    }
+
+    & .contant_hall_map {
         width: 1320px;
 
         & > .first_part_table {
@@ -1285,7 +1295,7 @@
             }
 
             & > .wall_big {
-                width: 948px;
+                width: 947px;
                 height: 60px;
                 border-radius: 10px 10px 0 10px;
                 background: #202020;
@@ -1327,7 +1337,7 @@
                 width: 60px;
                 height: 60px;
                 background-color: #202020;
-                margin-left: auto;
+                margin-left: 304px;
             }
         }
         
@@ -1341,7 +1351,7 @@
                 background: #202020;
             }
 
-            & > .contant_camera {
+            & > .around_camera {
                 width: 45px;
                 height: 45px;
                 display: flex;
@@ -1357,7 +1367,7 @@
                 }
             }
 
-            & > .contant_camera_right {
+            & > .around_camera_right {
                 width: 45px;
                 height: 45px;
                 display: flex;
@@ -1365,7 +1375,8 @@
                 justify-content: center;
                 background-color: #101010;
                 border-radius: 50%;
-                margin-left: auto;
+                margin-left: 936px;
+                cursor: pointer;
 
                 & > .camera {
                     width: 22px;
@@ -1438,7 +1449,7 @@
                 & > .contant_standart_pc-pc {
                     display: flex;
                     align-items: end;
-                    margin: 0 0 20px 126px;
+                    margin: 0 0 20px 124px;
 
                     & > .contant_standart_pc-pc {
                         & > .contant_standart_pc-pc_double-pc-pc {
@@ -1529,7 +1540,7 @@
                 height: 60px;
                 background-color: #202020;
                 border-radius: 0 10px 10px 0;
-                margin-right: 150px;
+                margin-right: 147px;
             }
 
             & > .wall_center_left {
@@ -1548,7 +1559,7 @@
             }
 
             & > .wall_center_right {
-                width: 119px;
+                width: 121px;
                 height: 60px;
                 background-color: #202020;
                 border-radius: 10px 0 0 10px;
@@ -1627,7 +1638,7 @@
                                 text-transform: uppercase;
                             }
 
-                            & > .contant_camera {
+                            & > .around_camera {
                                 width: 45px;
                                 height: 45px;
                                 background-color: #101010;
@@ -1783,7 +1794,7 @@
                             }
                         }
 
-                        & > .contant_camera {
+                        & > .around_camera {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -1812,14 +1823,14 @@
                         }
 
                         & > .wall {
-                            width: 60px;
+                            width: 59px;
                             height: 320px;
                             background-color: #202020;
                         }
                     }
 
                     & > .wall {
-                        width: 245px;
+                        width: 244px;
                         height: 60px;
                         background-color: #202020;
                     }
@@ -1842,7 +1853,7 @@
                                     margin: 10px 40px 0 20px;
 
                                     &.margin {
-                                        margin: 15px 40px 20px 20px;
+                                        margin: 15px 40px 20px 19px;
                                     }                                        
                                 }
 
@@ -1891,7 +1902,7 @@
                                     align-items: center;
 
                                     & > .wall{
-                                        width: 225px;
+                                        width: 224px;
                                         height: 60px;
                                         background-color: #202020;
                                         border-radius: 0 10px 10px 0;
@@ -1919,7 +1930,7 @@
                                         width: 265px;
                                         display: flex;
                                         justify-content: space-between;
-                                        margin: 75px auto 20px 20px;
+                                        margin: 75px 19.5px 20px;
 
                                         & > .boot_camp_pc-numbering{
                                             .standart_pc_zone-numbering_color();
@@ -1936,7 +1947,7 @@
                             }
 
                             & > .wall_big {
-                                width: 365px;
+                                width: 364px;
                                 height: 60px;
                                 background-color: #202020;
                                 border-radius: 0 0 10px 0;
@@ -1944,10 +1955,61 @@
                         }
                     }
                 }
-
-                
             }
         }
+    }
+}
+
+.img_photo {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 30px;
+    transition: transform .1s;
+    z-index: 99;
+
+    &.entrance {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubProf/popUpPhoto/admin.png') center / cover;
+    }
+
+    &.standart_plus {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubProf/slider/5.png') center / cover;
+    }
+
+    &.ps {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubProf/slider/4.png') center / cover;
+    }
+
+    &.standart {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubProf/slider/2.png') center / cover;
+    }
+
+    &.admin_bauman {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubBauman/popUp/KlycMOc-TrE.png') center / cover;
+    }
+
+    &.standart_plus_bauman {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubBauman/slider/2.png') center / cover;
+    }
+
+    &.wc_bauman {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubBauman/popUp/3tUSeDI-9e4.png') center / cover;
+    }
+
+    &.boot_camp {
+        display: none;
+        background: no-repeat url('/static/img/gallery/clubBauman/slider/3.png') center / cover;
     }
 }
 
@@ -2019,4 +2081,3 @@
         }
     }
 }
-
