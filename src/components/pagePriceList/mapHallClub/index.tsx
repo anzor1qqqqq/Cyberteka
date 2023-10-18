@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 
+import { useRouter } from "next/navigation";
+
 import ArrowEntranceSVG from "@/svg/clubInfo/svgIcon/arrowEntrance";
 import CameraSVG from "@/svg/clubInfo/svgIcon/camera";
 
@@ -9,6 +11,8 @@ import { IPropsPageClubAbout } from "@/types/types";
 import { FC } from "react";
 
 const MapHallClub: FC<IPropsPageClubAbout> = ({ club }) => {
+    const router = useRouter();
+
     const popUpImg = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, nameElem: string): void => {
         const nameElemDoc = document.querySelector(`.img_photo.${nameElem}`) as HTMLDivElement;
 
@@ -47,6 +51,10 @@ const MapHallClub: FC<IPropsPageClubAbout> = ({ club }) => {
     return (
         <div className="block_hall_map_info">
             <h1 className="block_hall_map_info-title">карта клуба</h1>
+
+            <div className="back_arrow" onClick={() => router.back()}>
+                <ArrowEntranceSVG/>
+            </div>
             
             <div className="overwloy">
                 {club === 'prof'
