@@ -10,7 +10,7 @@ import CameraSVG from "@/svg/clubInfo/svgIcon/camera";
 import { IPropsPageClubAbout } from "@/types/types";
 import { FC } from "react";
 
-const MapHallClub: FC<IPropsPageClubAbout> = ({ club }) => {
+const MapHallClub: FC<IPropsPageClubAbout> = ({ club }): JSX.Element => {
     const router = useRouter();
 
     const popUpImg = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, nameElem: string): void => {
@@ -152,7 +152,8 @@ const MapHallClub: FC<IPropsPageClubAbout> = ({ club }) => {
                             </div>
 
                             <div className="extreme_wall_ps">
-                                <div className="around_camera ps"
+
+                                <div className="around_camera ps" 
                                     onMouseMove={e => popUpImg(e, 'ps')} 
                                     onMouseLeave={() => closePopUp('ps')}>
 

@@ -8,6 +8,7 @@ import BackgroundStandartPlus from "@/svg/backgroundPriceList/zones/standartPlus
 import BackgroundBootCampSVG from "@/svg/backgroundPriceList/zones/bootCamp";
 import BackgroundHalLMapSVG from "@/svg/backgroundPriceList/zones/hallMap/firstSvg";
 import BackgroundHallMapSecondSVG from "@/svg/backgroundPriceList/zones/hallMap/secondSvg";
+import BookingContantSVG from "@/svg/backgroundPriceList/zones/bookingContant";
 
 import ArrowButtomBtnSVG from "@/svg/errorInput/arrowBottomBtn";
 import ArrowLeftBtnSVG from "@/svg/errorInput/arrowLeftBtn";
@@ -96,6 +97,8 @@ const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
             </section>
 
             <section className="container_booking_place">
+                <BookingContantSVG/>
+                
                 <div className="block_booking_place">
                     <div className="block_booking_place-wrapper">
                         <div className="block_booking_place-wrapper-wrapper">
