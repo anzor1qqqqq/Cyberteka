@@ -8,6 +8,6 @@ const ProfClubPage = () => {
             <PageClubAbout club='prof'/>
         </>
     );
-}
+} 
  
 export default ProfClubPage;

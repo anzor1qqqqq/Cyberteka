@@ -238,6 +238,8 @@ header {
     border-radius: 10px;
 
     @media screen and(max-width: 500px) {
+        display: flex;
+        margin: 50px auto 0;
         font-size: 20px;
         margin-top: 50px;
     }
@@ -250,6 +252,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     @media screen and(max-width: 1600px) {
         height: 100%
@@ -362,7 +365,7 @@ header {
     z-index: 1;
 
     @media screen and(max-width: 1000px) {
-        width: calc(100vw * 2);
+        width: 1000px;
     }
 
     & > #background_zone_react {
@@ -676,6 +679,7 @@ header {
     width: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .background_price_list {
@@ -683,6 +687,10 @@ header {
     height: 100%;
     position: absolute;
     z-index: 1;
+
+    @media screen and(max-width: 500px) {
+        width: 1000px;
+    }
 
     & > rect {
         width: inherit;
