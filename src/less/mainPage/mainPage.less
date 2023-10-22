@@ -1,0 +1,251 @@
+// out: "../../style/mainPage.css", compress: true, sourceMap: false
+
+.background_main_page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.svg_background_main_page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 20%;
+}
+
+.container_about_comp_club {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+
+    @media screen and (max-width: 1600px) {
+        width: 95%;
+    }
+
+    @media screen and (max-width: 1300px) {
+        width: 97%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+
+    & > .contant_main_club_about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > .block_main_info {
+            display: flex;
+            align-items: center;
+
+            &-img {
+                width: 100px;
+                height: 130px;
+            }
+        }
+
+        & > .button_book {
+            @media screen and (max-width: 1600px) {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+}
+
+.block_main_title {
+    margin-left: 50px;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 30px;
+    }
+
+    &-title {
+       color: #FFF;
+        font-size: 100px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: normal; 
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1600px) {
+            font-size: 80px;
+        }
+
+        @media screen and (max-width: 1300px) {
+            font-size: 60px;
+        }
+    }
+
+    &-slogan {
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1600px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.main_club_about_text {
+    width: 70%;
+    margin-top: 40px;
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: normal;
+
+    @media screen and (max-width: 1600px) {
+        font-size: 20px;
+    }
+}
+
+.container_img_info_club {
+    height: 100vh;
+
+    @media screen and (max-width: 1000px) {
+        width: 100vw;
+    }
+}
+
+.block_img_info_club {
+    position: relative;
+    height: 50%;
+    width: 1000px;
+
+    @media screen and (max-width: 2200px) {
+        width: 800px;
+    }
+
+    @media screen and (max-width: 2000px) {
+        width: 540px;
+    }
+
+    @media screen and (max-width: 1600px) {
+        width: 500px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+}
+
+.img_info_club-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img_info_club-btn {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    bottom: 10%;
+    left: 10%;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    color: #FFF;
+
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 15px 50px 15px 15px;
+
+    @media screen and (min-width: 1000px) {
+        &:hover > .arrow_SVG {
+            left: 80%;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        font-size: 20px;
+    }
+}
+
+.arrow_SVG {
+    position: absolute;
+    left: 75%;
+    width: 30px;
+    height: 20px;
+    transition: .5s;
+}
+
+.block_location_club {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 10%;
+}
+
+.location_club {
+    &-title {
+        color: #FFF;
+        font-size: 60px;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media screen and(max-width: 1400px) {
+            font-size: 50px;
+        }
+
+        @media screen and(max-width: 500px) {
+            font-size: 40px;
+        }
+    }
+
+    &-text {
+        color: #FFF;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media screen and(max-width: 1400px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.shadow_background {
+    &.prof {
+        background: linear-gradient(180deg, #290019 0%, rgba(72, 0, 70, 0.00) 50.61%, rgba(26, 0, 34, 0.00) 66.73%, #1E002C 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &.bauman {
+        background: linear-gradient(180deg, #290019 0%, #010029 0.01%, rgba(0, 46, 72, 0.00) 50.61%, rgba(0, 3, 34, 0.00) 66.73%, #06002C 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}

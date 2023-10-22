@@ -1,0 +1,1010 @@
+// out: "../../style/profMainPage.css", compress: true, sourceMap: false
+
+@Standart: #E637B7;
+
+.HEIGHTFULL {
+    height: calc(100vh + 100px);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+
+    @media screen and(max-width: 1000px) {
+        display: none;
+    }
+}
+
+.header_list {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &-li {
+        transform: rotate(90deg);
+        color: rgba(255, 255, 255, 0.50);
+        font-size: 30px;
+        font-weight: 400;
+        line-height: normal;
+
+        &.active {
+            font-size: 30px;
+            font-weight: 600;
+            color: #FFF;
+        }
+    }
+}
+
+.container_previe_prof_club {
+    .HEIGHTFULL();
+    position: relative;
+
+    & > .shadow_background {
+        &.prof {
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #35005F 100%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+    
+        &.bauman {
+            background: linear-gradient(270deg, rgba(98, 0, 175, 0.00) 0%, rgba(30, 0, 68, 0.90) 100%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+.img_club_prof {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+
+    &.bauman {
+        @media screen and(max-width: 1000px) {
+            object-position: right;
+        }
+    }
+}
+
+.contant_club_about {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    z-index: 2;
+
+    @media screen and(max-width: 1000px) {
+        top: 10%;
+        left: 10%;
+        right: 10%;
+    }
+
+    @media screen and(max-width: 500px) {
+        top: 10%;
+        left: 5%;
+        right: 5%;
+    }
+
+    @media screen and(max-width: 400px) {
+        top: 10%;
+        left: 2%;
+        right: 2%;
+    }
+}
+
+.block_logo_title {
+    display: flex;
+    align-items: center;
+
+    @media screen and(max-width: 500px) {
+        flex-direction: column;
+    }
+
+    & > .img_logo_club_about {
+        width: 130px;
+        height: 160px;
+        object-fit: cover;
+
+        @media screen and(max-width: 700px) {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.title_club_name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+
+    & > h1 {
+        color: #FFF;
+        font-size: 100px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media screen and(max-width: 1200px) {
+            font-size: 90px;
+        }
+
+        @media screen and(max-width: 900px) {
+            font-size: 70px;
+        }
+
+        @media screen and(max-width: 700px) {
+            font-size: 60px;
+        }
+
+        @media screen and(max-width: 700px) {
+            font-size: 40px;
+        }
+    }
+
+    & > span {
+        color: #FFF;
+        font-size: 45px;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media screen and(max-width: 1200px) {
+            font-size: 40px;
+        }
+
+        @media screen and(max-width: 700px) {
+            font-size: 30px;
+        }
+
+        @media screen and(max-width: 600px) {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and(max-width: 1200px) {
+        margin-left: 30px;
+    }
+
+    @media screen and(max-width: 500px) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.block_about_club_time_addrees {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+    @media screen and(max-width: 500px) {
+        margin-top: 50px;
+    }
+
+    & > span {
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        font-size: 34px;    
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        @media screen and(max-width: 700px) {
+            font-size: 30px;
+        }
+
+        @media screen and(max-width: 500px) {
+            font-size: 25px;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            border-top: transparent 10px solid;
+            border-bottom: transparent 10px solid;
+            border-left: #FFF 10px solid;
+            margin-right: 15px;
+        }
+    }
+}
+
+.btn_club_about_book {
+    margin-top: 60px;
+    color: #E73AB8;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: normal;
+    background-color: #FFF;
+    padding: 20px 40px;
+    border-radius: 10px;
+
+    @media screen and(max-width: 500px) {
+        display: flex;
+        margin: 50px auto 0;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
+.container_zones_info {
+    .HEIGHTFULL();
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media screen and(max-width: 1600px) {
+        height: 100%
+    }
+
+    &.bauman {
+        @media screen and(max-width: 1800px) {
+            height: 100%
+        }
+    }
+}
+
+.block_list_card_zone_club {
+    display: grid;
+
+    &.bauman {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 100px;
+        margin: 60px 200px;
+
+        @media screen and(max-width: 2500px) {
+            margin: 60px 100px;
+            gap: 20px;
+        }
+
+        @media screen and(max-width: 2000px) {
+            margin: 60px 20px;
+            gap: 20px;
+        }
+
+        @media screen and(max-width: 1800px) {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+            gap: 0;
+        }
+
+        @media screen and(max-width: 1300px) {
+            width: 50%;
+        }
+
+        @media screen and(max-width: 1000px) {
+            width: 60%;
+        }
+
+        @media screen and(max-width: 900px) {
+            width: 70%;
+        }
+
+        @media screen and(max-width: 700px) {
+            width: 80%;
+        }
+
+        @media screen and(max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    &.prof {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 200px;
+        margin: 60px 200px;
+
+        @media screen and(max-width: 2500px) {
+            gap: 100px;
+            margin: 60px 150px;
+        }
+
+        @media screen and(max-width: 2000px) {
+            gap: 70px;
+            margin: 60px 100px;
+        }
+
+        @media screen and(max-width: 1700px) {
+            gap: 50px;
+            margin: 60px 50px;
+        }
+
+        @media screen and(max-width: 1600px) {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 50px auto;
+        }
+
+        @media screen and(max-width: 900px) {
+            width: 70%;
+        }
+
+        @media screen and(max-width: 700px) {
+            width: 80%;
+        }
+
+        @media screen and(max-width: 600px) {
+            width: 90%;
+        }
+
+        @media screen and(max-width: 600px) {
+            width: 100%;
+        }
+    }
+}
+
+.background_zones {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    @media screen and(max-width: 1000px) {
+        width: 1000px;
+    }
+
+    & > #background_zone_react {
+        width: 100%;
+        height: 100%;
+
+        @media screen and(max-width: 1000px) {
+            width: inherit;
+        }
+    }
+}
+
+.contant_card_zone_club {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    border: 5px solid #FFF;
+    border-radius: 50px;
+
+    @media screen and(max-width: 1600px) {
+        margin: 100px 0;
+        width: 70%;
+        border: none;
+    }
+
+    @media screen and(max-width: 500px) {
+        width: 80%;
+    }
+
+    @media screen and(max-width: 400px) {
+        width: 90%;
+    }
+
+    &.bauman {
+        @media screen and(max-width: 1800px) {
+            margin: 100px 0;
+            width: 70%;
+            border: none;
+        }
+
+        @media screen and(max-width: 500px) {
+            margin: 100px 0;
+            width: 80%;
+        }
+
+        @media screen and(max-width: 400px) {
+            margin: 100px 0;
+            width: 90%;
+        }
+    }
+}
+
+.card_zone_club-title {
+    color: #FFF;
+    font-size: 43px;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+
+    @media screen and(max-width: 500px) {
+        font-size: 30px;
+    }
+}
+
+.block_card_zone_club {
+    border-radius: 30px;
+    background: #1F1F1F;
+    padding: 15px;
+
+    @media screen and(max-width: 1600px) {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &.bauman {
+        @media screen and(max-width: 1800px) {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &-border {
+        border-radius: 15px;
+        border: 3px solid rgba(255, 255, 255, 0.05);
+    }
+
+    &-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+
+        @media screen and(max-width: 500px) {
+            padding: 20px 0;
+        }
+
+        & > .card_zone-config {
+            color: rgba(255, 255, 255, 0.30);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        & > .card_zone-title {
+            color: #FFF;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @media screen and(max-width: 1000px) {
+                font-size: 30px;
+            }
+        }
+
+        & > .card_zone-border {
+            padding: 20px;
+            border-radius: 10px;
+
+            @media screen and(max-width: 500px) {
+                padding: 10px;
+            }
+
+            &.standart {
+                border: 3px solid #E637B7;
+            }
+
+            &.standart_plus {
+                border: 3px solid #149EF2;
+            }
+            
+            &.console {
+                border: 3px solid #142AF2;
+            }
+
+            &.boot_camp {
+                border: 3px solid #FF003D;
+            }
+        }
+
+        & > .card_zone-name {
+            color: #FFF;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: normal;
+            margin: 15px 0 10px;
+
+            @media screen and (max-width: 500px) {
+                font-size: 25px;
+            }
+        }
+
+        & > .card_zone-btn {
+            display: inline-flex;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+
+            & > .arrow_SVG {
+                position: relative;
+                left: 0;
+                width: 20px;
+                height: 25px;
+                margin-left: 10px;
+                transition: .5s;
+            }
+
+            @media screen and (min-width: 900px) {
+                &:hover > .arrow_SVG {
+                    transform: translateX(10px);
+                }
+            }
+
+            &.standart {
+                color:#E637B7;
+            }
+
+            &.standart_plus {
+                color:#149EF2;
+            }
+            
+            &.console {
+                color:#142AF2;
+            }
+
+            &.boot_camp {
+                color:#FF003D;
+            }
+        }
+    }
+}
+
+.img_zones_card {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.container_slider_galerry_club {
+    .HEIGHTFULL();
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.img_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.swiper-slide  {
+    width: 1200px;
+
+    @media screen and(max-width: 2000px) {
+        width: 1000px;
+    }
+
+    @media screen and(max-width: 1500px) {
+        width: 900px;
+    }
+
+    @media screen and(max-width: 1300px) {
+        width: 800px;
+    }
+
+    @media screen and(max-width: 900px) {
+        width: 700px;
+    }
+
+    @media screen and(max-width: 800px) {
+        width: 600px;
+    }
+
+    @media screen and(max-width: 700px) {
+        width: 500px;
+        height: 500px;
+    }
+
+    @media screen and(max-width: 600px) {
+        height: 400px;
+    }
+
+    @media screen and(max-width: 500px) {
+        width: 400px;
+        height: 300px;
+    }
+
+    @media screen and(max-width: 400px) {
+        width: 300px;
+        height: 250px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 120px;
+
+        @media screen and(max-width: 1300px) {
+            margin-right: 50px;
+        }
+
+        @media screen and(max-width: 800px) {
+            margin-right: 30px;
+        }
+
+        @media screen and(max-width: 600px) {
+            margin-right: 20px;
+        }
+
+        @media screen and(max-width: 600px) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.swiper-wrapper {
+    height: 90%;
+}
+
+.swiper-pagination {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(217, 217, 217, 0.10);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #D9D9D9;
+}
+
+.container_price_list_club {
+    height: calc(100vh + 100px);
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.background_price_list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    @media screen and(max-width: 500px) {
+        width: 1000px;
+    }
+
+    & > rect {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.contant_price_list_club {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    background: #1B1B1B;
+
+    @media screen and(max-width: 1200px) {
+        width: 50%;
+    }
+
+    @media screen and(max-width: 700px) {
+        width: 40%;
+    }
+
+    @media screen and(max-width: 500px) {
+        width: 60%;
+    }
+}
+
+.price_list_link {
+    position: absolute;
+    display: inline-flex;
+    bottom: 5%;
+    left: 5%;
+
+    & > .arrow_SVG {
+        position: relative;
+        left: 0;
+        width: 20px;
+        height: 25px;
+        margin-left: 10px;
+        transition: .5s;
+    }
+
+    @media screen and (min-width: 900px) {
+        &:hover > .arrow_SVG {
+            transform: translateX(10px);
+        }
+    }
+}
+
+.container_footer_how_to_find_us {
+    .HEIGHTFULL();
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: 1700px) {
+        height: 100%;
+    }
+}
+
+.contant_footer_find {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and(max-width: 1700px) {
+        width: 70%;
+        flex-direction: column;
+        margin: 100px auto;
+    }
+
+    @media screen and(max-width: 800px) {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    @media screen and(max-width: 800px) {
+        width: 90%;
+    }
+
+    @media screen and(max-width: 500px) {
+        width: 95%;
+        margin: 50px auto 10px;
+    }
+}
+
+.block_address_number {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.40);
+
+    @media screen and(max-width: 1700px) {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    @media screen and(max-width: 800px) {
+        margin-bottom: 40px;
+    }
+
+    &-layot {
+        padding: 50px;
+
+        @media screen and(max-width: 1700px) {
+            width: 100%;
+        }
+
+        @media screen and(max-width: 700px) {
+            padding: 30px;
+        }
+
+        @media screen and(max-width: 500px) {
+            padding: 20px;
+        }
+    }
+
+    &-title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 40px;
+
+        @media screen and(max-width: 600px) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-metro {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        @media screen and(max-width: 600px) {
+            margin-bottom: 30px;
+        }
+
+        & > #block_metro {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+
+            @media screen and(max-width: 600px) {
+                font-size: 15px;
+            }
+
+            & > .address_name {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: normal;
+                margin-right: 10px;
+
+                @media screen and(max-width: 600px) {
+                    font-size: 15px;
+                }
+            }
+
+            & > .round {
+                width: 1em;
+                height: 1em;
+                margin-right: 10px;
+                border-radius: 50%;
+
+                &.prof {
+                    background-color: #FF8A00;
+                }
+
+                &.akad {
+                    background-color: #F00;
+                }
+                
+                &.bauman {
+                    background-color: #142AF2;
+                }
+
+                &.kras {
+                    background-color: #F00;
+                }
+            }
+
+            & > .time_to_metro {
+                color: #3E3E3E;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+
+                @media screen and(max-width: 600px) {
+                    font-size: 15px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &-address_number {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        @media screen and(max-width: 600px) {
+            margin-bottom: 30px;
+        }
+
+        & > .address_text {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 10px;
+
+            @media screen and(max-width: 600px) {
+                font-size: 15px;
+            }
+
+            & > .address {
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+
+                @media screen and(max-width: 600px) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        & > .number_text {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+
+            @media screen and(max-width: 600px) {
+                font-size: 15px;
+            }
+
+            & > .number {
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+
+                @media screen and(max-width: 600px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    &-about_info {
+        margin-bottom: 80px;
+
+        @media screen and(max-width: 600px) {
+            margin-bottom: 50px;
+        }
+
+        & > span {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: normal;
+
+            @media screen and(max-width: 600px) {
+                font-size: 15px;
+            }
+        }
+
+        & > p {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+
+            @media screen and(max-width: 600px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &-book_svg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > button {
+            margin: 0;
+            font-size: 20px;
+
+            @media screen and(max-width: 500px) {
+                width: 60%;
+                font-size: 15px;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.block_map_club {
+    width: 55%;
+    display: flex;
+
+    @media screen and(max-width: 1700px) {
+        width: 100%;
+    }
+
+    & > img {
+        border-radius: 30px;
+        object-fit: cover;
+    }
+}
