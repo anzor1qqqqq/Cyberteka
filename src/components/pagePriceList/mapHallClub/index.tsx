@@ -13,6 +13,7 @@ import { FC } from "react";
 const MapHallClub: FC<IPropsPageClubAbout> = ({ club }): JSX.Element => {
     const router = useRouter();
 
+
     const popUpImg = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, nameElem: string): void => {
         const nameElemDoc = document.querySelector(`.img_photo.${nameElem}`) as HTMLDivElement;
 
