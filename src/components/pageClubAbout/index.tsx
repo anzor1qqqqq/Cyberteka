@@ -21,7 +21,7 @@ import BackgroundZonesSVG from "@/svg/clubInfo/backgroundClubInfo/backgroundZone
 import { IPropsPageClubAbout } from "@/types/types";
 import { FC } from "react";
 
-const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
+const PageClubAbout: FC<IPropsPageClubAbout> = ({ club }): JSX.Element => {
     const pathName = usePathname();
 
     React.useEffect(() => {
@@ -99,10 +99,9 @@ const PageClubAbout: FC<IPropsPageClubAbout> = ({club}): JSX.Element => {
             bool = !bool;
         };
 
-        {window.innerWidth <= 1000 
-        ? ''
-        : window.addEventListener('scroll', ThrotlingScroll(scrollListen));
-        }  
+        window.innerWidth >= 1000
+        ? window.addEventListener('scroll', ThrotlingScroll(scrollListen))
+        : '';
 
         return () => {
             window.removeEventListener('scroll', ThrotlingScroll(scrollListen));

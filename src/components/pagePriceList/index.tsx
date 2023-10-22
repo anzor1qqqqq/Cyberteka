@@ -20,7 +20,7 @@ import { FC } from 'react'
 const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
     return (
         <main>
-            <section className="container_price_list_standart">
+            <section className="container_price_list_standart" id="standart">
                 <BackgroundPriceListStandartSVG/>
 
                 <div className="block_price_list_standart">
@@ -40,7 +40,7 @@ const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
                 </div>
             </section>
 
-            <section className="container_price_list_standart_plus">
+            <section className="container_price_list_standart_plus" id="standartPlus">
                 <BackgroundStandartPlus/>
 
                 <div className="block_price_list_standart_plus">
@@ -61,7 +61,7 @@ const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
             </section>
 
             {club === 'bauman' && 
-                <section className="container_price_list_bootCamp">
+                <section className="container_price_list_bootCamp" id="bootCamp">
                     <BackgroundBootCampSVG/>
                     
                     <div className="block_price_list_bootCamp">
@@ -82,7 +82,7 @@ const PagePriceList: FC<IPropsPageClubAbout> = ({club}) => {
                 </section>
             }
 
-            <section className="container_price_list_ps">
+            <section className="container_price_list_ps" id="console">
                 <BackgroundPsSVG/>
                 
                 <div className="block_price_list_ps">

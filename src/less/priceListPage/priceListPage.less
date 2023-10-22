@@ -1021,6 +1021,10 @@
     .FULLSCREENCONTAINER();
     height: calc(100vh + 400px);
     position: relative;
+
+    @media screen and(max-width: 1000px) {
+        height: 1200px;
+    }
      
     & > .backgroundHallMap {
         position: absolute;
@@ -1621,6 +1625,11 @@
                 border-radius: 50%;
                 margin-left: 936px;
                 cursor: pointer;
+
+                @media screen and(max-width: 1000px) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
 
                 & > .camera {
                     width: 22px;
