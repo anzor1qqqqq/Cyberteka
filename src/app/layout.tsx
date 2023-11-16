@@ -20,6 +20,8 @@ export default function RootLayout({children}: IChildrenElement): JSX.Element {
         <link rel="icon" type="image/png" sizes="16x16" href="/static/img/logo/favicon-16x16.png"/>
         <link rel="manifest" href="/static/img/logo/site.webmanifest"/>
         <link rel="mask-icon" href="/static/img/logo/safari-pinned-tab.svg" color="#5bbad5"/>
+
+        <meta name="yandex-verification" content="0d5bfffd9278c2ac" />
         <meta name="msapplication-TileColor" content="#da532c"/>
         <meta name="theme-color" content="#ffffff"/>
         
